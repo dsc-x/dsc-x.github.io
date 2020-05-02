@@ -1,40 +1,25 @@
 import React, { Component } from 'react';
-import dsclogo from './imgs/dsclogo.png';
-import shortlogo from './imgs/shortlogo.png';
+import MiniChapter from './MiniChapter';
+import FullChapter from './FullChapter';
+import dsclogo from './assets/images/dsclogo.png';
 import './App.sass';
+import data from "./data/fulllist.json";
+
 import SearchBar from 'material-ui-search-bar'
 import { withStyles } from '@material-ui/core/styles';
-
-import Paper from '@material-ui/core/Paper';
-import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import ShareIcon from '@material-ui/icons/Share';
-import CloseOutlined from '@material-ui/icons/CloseOutlined';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
-
+import { Hidden, Container, CssBaseline, Grid } from '@material-ui/core';
+import Drawer from '@material-ui/core/Drawer';
 
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
+    width: "100vw",
+    overflowX: "hidden"
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-  },
-  cardContainer: {
-    flexGrow: 1,
-    height: "100vh"
   }
 });
 
@@ -43,13 +28,63 @@ class App extends Component {
     super(props)
 
     this.state = {
-      searchKey: ""
+      searchKey: "",
+      gridSize: 12,
+      cardSize: 3,
+      infoCardOpen: false,
+      gridSpacing: 6,
+      focusCardData: [],
+      searchState: [],
+      renderData: []
     }
   }
 
+  initSearch = () => {
+    var filtered = [];
+    data.dscs.map((dsc, i) => {
+      filtered.push(dsc)
+    })
+    this.setState({renderData: filtered})
+  }
+
   makeSearch = () => {
-    const searchKey = this.state.searchKey;
-    console.log(searchKey);
+    const self = this;
+    var filteredData=[];
+    data.dscs.map((element)  => {
+      if(
+          element.Campus.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
+          element.Acronym.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
+          element.City.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
+          element.LeadName.toLowerCase().includes(self.state.searchKey.toLowerCase())
+        ){
+        filteredData.push(element)
+      }
+    });
+    self.setState({ renderData: filteredData});
+  }
+
+  clearSearch = () => {
+    this.setState({ searchKey: ""});
+    this.initSearch();
+  }
+
+  handleInfoCardOpen = (data) => {
+    this.setState({ focusCardData: data })
+    this.setState({ infoCardOpen: true })
+    this.setState({ cardSize: 4 })
+    this.setState({ gridSize: 8 })
+    this.setState({ gridSpacing: 10 })
+  }
+
+  handleInfoCardClose = () => {
+    this.setState({ infoCardOpen: false })
+    this.setState({ cardSize: 3 })
+    this.setState({ gridSize: 12 })
+    this.setState({ gridSpacing: 6 })
+  }
+
+  componentDidMount(){
+    this.initSearch();
   }
 
   render() {
@@ -57,73 +92,73 @@ class App extends Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <Grid container spacing={3}>
-          <Grid item lg={8}>
-            <Container component="div" maxWidth="sm" id="logoContainer">
-              <img src={dsclogo} alt="DSC logo"></img>
-              <SearchBar
-                value={this.state.searchKey}
-                onChange={(newValue) => this.setState({ searchKey: newValue })}
-                onRequestSearch={() => this.makeSearch()}
-                style={{
-                  margin: '2rem auto',
-                  maxWidth: "100%",
-                  borderRadius: "500px"
-                }}
-                classes={{
-                  iconButton: "bluebtn"
-                }}
-              />
-            </Container>
-            <Container maxWidth="lg" component="div">
-              <Grid container spacing={3}>
-                <Grid item xs>
-                  <Paper className={classes.paper}>xs</Paper>
-                </Grid>
-                <Grid item xs>
-                  <Paper className={classes.paper}>xs</Paper>
-                </Grid>
-                <Grid item xs>
-                  <Paper className={classes.paper}>xs</Paper>
-                </Grid>
-              </Grid>
-            </Container>
+          <Grid container>
+            <Grid item lg={this.state.gridSize} xs={12} style={{ padding: "0 auto !important" }}>
+              <Container component="div">
+                <Hidden xsDown>
+                  <Container component="div" maxWidth="sm" id="logoContainer">
+                    <img src={dsclogo} alt="DSC logo" style={{ padding: "0 3rem" }}></img>
+                  </Container>
+                </Hidden>
+                <Hidden smUp>
+                  <Container component="div" maxWidth="xl" id="logoContainer">
+                    <img src={dsclogo} alt="DSC logo"></img>
+                  </Container>
+                </Hidden>
+                <Container component="div" maxWidth="sm">
+                  <SearchBar
+                    value={this.state.searchKey}
+                    onChange={(newValue) => this.setState({ searchKey: newValue })}
+                    onRequestSearch={() => this.makeSearch()}
+                    onCancelSearch={()=> this.clearSearch()}
+                    style={{
+                      margin: '2rem auto',
+                      maxWidth: "100%",
+                      borderRadius: "500px"
+                    }}
+                    placeholder="Search"
+                  />
+                </Container>
+              </Container>
+              <Container maxWidth="lg" component="div" style={{ marginTop: "6rem" }}>
+                <Hidden lgUp>
+                  <Grid container spacing={0}>
+                    {this.state.renderData.map((dsc, i) => (
+                      <MiniChapter cardSize={this.state.cardSize} handleInfoCardOpen={() => this.handleInfoCardOpen(dsc)} data={dsc} key={i} spacing={0} />
+                    ))}
+                  </Grid>
+                </Hidden>
+                <Hidden mdDown>
+                  <Grid container spacing={this.state.gridSpacing}>
+                    {this.state.renderData.map((dsc, i) => (
+                      <MiniChapter cardSize={this.state.cardSize} handleInfoCardOpen={() => this.handleInfoCardOpen(dsc)} data={dsc} key={i} />
+                    ))}
+                  </Grid>
+                </Hidden>
+              </Container>
+            </Grid>
+            {
+              this.state.infoCardOpen &&
+              (
+                <Hidden mdDown>
+                  <Grid item lg={4} xs={12} style={{ padding: "0 auto !important" }}>
+                    <FullChapter data={this.state.focusCardData} handleInfoCardClose={this.handleInfoCardClose} position="fixed" />
+                  </Grid>
+                </Hidden>
+              )
+            }
+            {
+              this.state.infoCardOpen &&
+              (
+                <Hidden lgUp>
+                  <Drawer anchor="bottom" open={this.state.infoCardOpen} onClose={this.handleInfoCardClose} style={{ zIndex: 99999 }}>
+                    <FullChapter data={this.state.focusCardData} handleInfoCardClose={this.handleInfoCardClose} />
+                  </Drawer>
+                </Hidden>
+              )
+            }
+
           </Grid>
-          <Grid item lg={4}>
-            <Card className={classes.cardContainer}>
-              <CardHeader
-                avatar={
-                  <Avatar src={shortlogo} />
-                }
-                action={
-                  <IconButton aria-label="close">
-                    <CloseOutlined />
-                  </IconButton>
-                }
-                title="DSC NSEC"
-                subheader="Netaji Subhash Engineering College"
-              />
-              <CardMedia
-                className={classes.media}
-                image="/static/images/cards/paella.jpg"
-                title="Paella dish"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                  <ShareIcon />
-                </IconButton>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
       </React.Fragment>
     );
   }

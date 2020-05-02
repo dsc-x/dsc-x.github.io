@@ -1,0 +1,1 @@
+mogrify -path . -auto-orient -thumbnail 500x *.jpeg

@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.sass';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import theme from "./theme";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <MuiThemeProvider theme={theme}>
+      <App />
+    </MuiThemeProvider>
+  // </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 
