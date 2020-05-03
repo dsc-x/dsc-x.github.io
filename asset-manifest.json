@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dscindia/static/css/main.00a8c48a.chunk.css",
+    "main.js": "/dscindia/static/js/main.ca9da196.chunk.js",
+    "main.js.map": "/dscindia/static/js/main.ca9da196.chunk.js.map",
+    "runtime-main.js": "/dscindia/static/js/runtime-main.ab19dfdd.js",
+    "runtime-main.js.map": "/dscindia/static/js/runtime-main.ab19dfdd.js.map",
+    "static/js/2.0d621012.chunk.js": "/dscindia/static/js/2.0d621012.chunk.js",
+    "static/js/2.0d621012.chunk.js.map": "/dscindia/static/js/2.0d621012.chunk.js.map",
+    "index.html": "/dscindia/index.html",
+    "precache-manifest.2896c7a8f39dc5a3eb49a483087bfd27.js": "/dscindia/precache-manifest.2896c7a8f39dc5a3eb49a483087bfd27.js",
+    "service-worker.js": "/dscindia/service-worker.js",
+    "static/css/main.00a8c48a.chunk.css.map": "/dscindia/static/css/main.00a8c48a.chunk.css.map",
+    "static/js/2.0d621012.chunk.js.LICENSE.txt": "/dscindia/static/js/2.0d621012.chunk.js.LICENSE.txt",
+    "static/media/cardImage.png": "/dscindia/static/media/cardImage.04f7ed19.png",
+    "static/media/dsclogo.png": "/dscindia/static/media/dsclogo.cc949774.png",
+    "static/media/shortlogo.png": "/dscindia/static/media/shortlogo.8fb0d5d9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab19dfdd.js",
+    "static/js/2.0d621012.chunk.js",
+    "static/css/main.00a8c48a.chunk.css",
+    "static/js/main.ca9da196.chunk.js"
+  ]
+}
