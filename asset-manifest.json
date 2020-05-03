@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/dsc-india-directory/static/css/main.00a8c48a.chunk.css",
-    "main.js": "/dsc-india-directory/static/js/main.8451abb5.chunk.js",
-    "main.js.map": "/dsc-india-directory/static/js/main.8451abb5.chunk.js.map",
-    "runtime-main.js": "/dsc-india-directory/static/js/runtime-main.1be5eeb9.js",
-    "runtime-main.js.map": "/dsc-india-directory/static/js/runtime-main.1be5eeb9.js.map",
-    "static/js/2.0d621012.chunk.js": "/dsc-india-directory/static/js/2.0d621012.chunk.js",
-    "static/js/2.0d621012.chunk.js.map": "/dsc-india-directory/static/js/2.0d621012.chunk.js.map",
-    "index.html": "/dsc-india-directory/index.html",
-    "precache-manifest.48b3a4dfc3e4eb0e3cc8f6c81f12b7b3.js": "/dsc-india-directory/precache-manifest.48b3a4dfc3e4eb0e3cc8f6c81f12b7b3.js",
-    "service-worker.js": "/dsc-india-directory/service-worker.js",
-    "static/css/main.00a8c48a.chunk.css.map": "/dsc-india-directory/static/css/main.00a8c48a.chunk.css.map",
-    "static/js/2.0d621012.chunk.js.LICENSE.txt": "/dsc-india-directory/static/js/2.0d621012.chunk.js.LICENSE.txt",
-    "static/media/cardImage.png": "/dsc-india-directory/static/media/cardImage.04f7ed19.png",
-    "static/media/dsclogo.png": "/dsc-india-directory/static/media/dsclogo.cc949774.png",
-    "static/media/shortlogo.png": "/dsc-india-directory/static/media/shortlogo.8fb0d5d9.png"
+    "main.css": "./static/css/main.5cd9c76b.chunk.css",
+    "main.js": "./static/js/main.5002d2a2.chunk.js",
+    "main.js.map": "./static/js/main.5002d2a2.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.0acada96.js",
+    "runtime-main.js.map": "./static/js/runtime-main.0acada96.js.map",
+    "static/js/2.1fef8499.chunk.js": "./static/js/2.1fef8499.chunk.js",
+    "static/js/2.1fef8499.chunk.js.map": "./static/js/2.1fef8499.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.02a3ee6b69c0be484152df04c774269d.js": "./precache-manifest.02a3ee6b69c0be484152df04c774269d.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.5cd9c76b.chunk.css.map": "./static/css/main.5cd9c76b.chunk.css.map",
+    "static/js/2.1fef8499.chunk.js.LICENSE.txt": "./static/js/2.1fef8499.chunk.js.LICENSE.txt",
+    "static/media/cardImage.png": "./static/media/cardImage.04f7ed19.png",
+    "static/media/dsclogo.png": "./static/media/dsclogo.cc949774.png",
+    "static/media/shortlogo.png": "./static/media/shortlogo.8fb0d5d9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1be5eeb9.js",
-    "static/js/2.0d621012.chunk.js",
-    "static/css/main.00a8c48a.chunk.css",
-    "static/js/main.8451abb5.chunk.js"
+    "static/js/runtime-main.0acada96.js",
+    "static/js/2.1fef8499.chunk.js",
+    "static/css/main.5cd9c76b.chunk.css",
+    "static/js/main.5002d2a2.chunk.js"
   ]
 }
