@@ -1,7 +1,5 @@
 # Developer Student Clubs Directory
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <img src="https://raw.githubusercontent.com/dsc-x/about/master/images/project.png" width="100%">
 Version: 1.0
 
@@ -68,6 +66,11 @@ npm start
 - Pull requests _must_ be made against `dev` branch. Any other branch (unless specified by the maintainers) will get rejected.
 
 ## Contributors
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <b>Maintainer:</b> [Anubhav Singh](https://github.com/xprilion) <br>
 <b>Developers:</b> [Anubhav Singh](https://github.com/xprilion) <br>
 <b>UI Mockup</b> [Samarth Nayyar](https://github.com/samarthdesigns)
