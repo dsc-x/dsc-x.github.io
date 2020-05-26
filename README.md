@@ -70,6 +70,8 @@ npm start
 ## Contributors
 <b>Maintainer:</b> [Anubhav Singh](https://github.com/xprilion) <br>
 <b>Developers:</b> [Anubhav Singh](https://github.com/xprilion) <br>
+<b>UI Mockup</b> [Samarth Nayyar](https://github.com/samarthdesigns)
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -78,15 +80,6 @@ npm start
     <td align="center"><a href="https://sourcerer.io/ashfaqnisar"><img src="https://avatars0.githubusercontent.com/u/20638539?v=4" width="100px;" alt=""/><br /><sub><b>Ashfaq Nisar</b></sub></a><br /><a href="https://github.com/dsc-x/dsc-x.github.io/commits?author=ashfaqnisar" title="Code">💻</a></td>
   </tr>
 </table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-<b>UI Mockup</b> [Samarth Nayyar](https://github.com/samarthdesigns)
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
