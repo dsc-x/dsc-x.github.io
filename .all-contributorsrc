@@ -6,15 +6,6 @@
   "commit": false,
   "contributors": [
     {
-      "login": "ashfaqnisar",
-      "name": "Ashfaq Nisar",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/20638539?v=4",
-      "profile": "https://sourcerer.io/ashfaqnisar",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "login": "xprilion",
       "name": "Anubhav Singh",
       "avatar_url": "https://avatars1.githubusercontent.com/u/7047208?v=4",
@@ -24,6 +15,24 @@
         "ideas",
         "code",
         "maintenance"
+        ]
+     },
+     {
+      "login": "samarthdesigns",
+      "name": "Samarth Nayyar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25741135?v=4",
+      "profile": "http://samrthnayyar.me",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "ashfaqnisar",
+      "name": "Ashfaq Nisar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20638539?v=4",
+      "profile": "https://sourcerer.io/ashfaqnisar",
+      "contributions": [
+        "code"
       ]
     }
   ],
