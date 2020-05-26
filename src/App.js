@@ -24,8 +24,8 @@ const styles = (theme) => ({
   footer: {
     width: "100%",
     backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing.unit * 8,
-    padding: `${theme.spacing.unit * 6}px 0`,
+    marginTop: theme.spacing(8),
+    padding: `${theme.spacing(6)}px 0`,
   }
 });
 
@@ -137,7 +137,7 @@ class App extends Component {
                 </Hidden>
               </Container>
               <footer className={classes.footer}>
-              <Paper className={classes.paper} elevation="0">
+              <Paper className={classes.paper} elevation={0}>
                   Developed with <span role="img" aria-label="heart">❤️</span> by <a href="https://twitter.com/xprilion">@xprilion</a>
                     <br></br>
                     <br></br>
