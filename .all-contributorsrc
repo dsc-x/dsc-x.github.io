@@ -13,6 +13,18 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "xprilion",
+      "name": "Anubhav Singh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7047208?v=4",
+      "profile": "https://xprilion.com",
+      "contributions": [
+        "projectManagement",
+        "ideas",
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
