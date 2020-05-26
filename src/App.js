@@ -7,7 +7,7 @@ import data from "./data/fulllist.json";
 
 import SearchBar from 'material-ui-search-bar'
 import { withStyles } from '@material-ui/core/styles';
-import { Hidden, Container, CssBaseline, Grid } from '@material-ui/core';
+import { Hidden, Container, CssBaseline, Grid, Paper } from '@material-ui/core';
 import Drawer from '@material-ui/core/Drawer';
 
 const styles = (theme) => ({
@@ -20,6 +20,12 @@ const styles = (theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+  },
+  footer: {
+    width: "100%",
+    backgroundColor: theme.palette.background.paper,
+    marginTop: theme.spacing.unit * 8,
+    padding: `${theme.spacing.unit * 6}px 0`,
   }
 });
 
@@ -136,6 +142,15 @@ class App extends Component {
                   </Grid>
                 </Hidden>
               </Container>
+              <footer className={classes.footer}>
+              <Paper className={classes.paper} elevation="0">
+                  Developed with <span role="img" aria-label="heart">❤️</span> by <a href="https://twitter.com/xprilion">@xprilion</a>
+                    <br></br>
+                    <br></br>
+                    Project is published under the <a href="https://github.com/dsc-x/dsc-x.github.io/blob/dev/LICENSE">MIT license</a>. <br /> 
+                    Feel free to <a href="https://github.com/dsc-x/dsc-x.github.io">clone and modify repo</a> as you want, but don't forget to add reference to contributors :)
+              </Paper>
+            </footer>
             </Grid>
             {
               this.state.infoCardOpen &&
@@ -157,7 +172,7 @@ class App extends Component {
                 </Hidden>
               )
             }
-
+            
           </Grid>
       </React.Fragment>
     );

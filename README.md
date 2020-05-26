@@ -66,7 +66,7 @@ npm start
 
 ## Contributors
 <b>Maintainer:</b> [Anubhav Singh](https://github.com/xprilion) <br>
-<b>Developers:</b> [Anubhav Singh](https://github.com/xprilion)
+<b>Developers:</b> [Anubhav Singh](https://github.com/xprilion) <br>
 <b>UI Mockup</b> [Samarth Nayyar](https://github.com/samarthdesigns)
 
 ## Facing Any Problem or need any Help?
