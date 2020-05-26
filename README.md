@@ -68,7 +68,7 @@ npm start
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <b>Maintainer:</b> [Anubhav Singh](https://github.com/xprilion) <br>
@@ -81,6 +81,7 @@ npm start
 <table>
   <tr>
     <td align="center"><a href="https://sourcerer.io/ashfaqnisar"><img src="https://avatars0.githubusercontent.com/u/20638539?v=4" width="100px;" alt=""/><br /><sub><b>Ashfaq Nisar</b></sub></a><br /><a href="https://github.com/dsc-x/dsc-x.github.io/commits?author=ashfaqnisar" title="Code">💻</a></td>
+    <td align="center"><a href="http://samrthnayyar.me"><img src="https://avatars0.githubusercontent.com/u/25741135?v=4" width="100px;" alt=""/><br /><sub><b>Samarth Nayyar</b></sub></a><br /><a href="#design-samarthdesigns" title="Design">🎨</a></td>
   </tr>
 </table>
 
