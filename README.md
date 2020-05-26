@@ -6,7 +6,7 @@ Version: 1.0
 
 ### :star: the repo to support the project
 
-### If you are a DSC Lead and want your chapter listed here, or want to update the information about your chapter, create an [Issue](https://github.com/dsc-x/dsc-x.github.io/issues).
+### If you are a DSC Lead and want your chapter listed here, or want to update the information about your chapter, create an [Issue](https://github.com/dsc-x/dsc-x.github.io/issues). Then, create a PR closing that issue with the updated details for your chapter!
 
 ## Overview
 
