@@ -47,25 +47,19 @@ class App extends Component {
 
   initSearch = () => {
     var filtered = [];
-    data.dscs.map((dsc, i) => {
-      filtered.push(dsc)
-    })
+    filtered  =  data.dscs.map(dsc => dsc)
     this.setState({renderData: filtered})
   }
 
   makeSearch = () => {
     const self = this;
     var filteredData=[];
-    data.dscs.map((element)  => {
-      if(
-          element.Campus.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
+    filteredData = data.dscs.filter((element)  => element.Campus.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
           element.Acronym.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
           element.City.toLowerCase().includes(self.state.searchKey.toLowerCase()) ||
-          element.LeadName.toLowerCase().includes(self.state.searchKey.toLowerCase())
-        ){
-        filteredData.push(element)
-      }
-    });
+          element.LeadName.toLowerCase().includes(self.state.searchKey.toLowerCase()))
+      
+    
     self.setState({ renderData: filteredData});
   }
 
