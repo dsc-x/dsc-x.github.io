@@ -154,7 +154,7 @@ export default function FullChapter(props) {
                             </IconButton>
                         )}
                         { props.data.DSCApp.length > 0 && (
-                            <IconButton aria-label="Email" href={props.data.DSCApp}>
+                            <IconButton aria-label="Email" href={"//"+props.data.DSCApp}>
                                 <ShopIcon />
                             </IconButton>
                         )}
