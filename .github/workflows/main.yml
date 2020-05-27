@@ -17,6 +17,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: npm install
+    - name: Lead Pics Optimize
+      uses: sharadcodes/img-resizer@v1.1
+      with:
+        image-folder: "public/leads"
+        new-resolution: '300x300'
+        output-folder: "public/leads"
+    - name: Chapter Pics Optimize
+      uses: sharadcodes/img-resizer@v1.1
+      with:
+        image-folder: "public/chapters"
+        new-resolution: '500x500'
+        output-folder: "public/chapters"
     - name: Build
       run: npm run build
     - name: Deploy
