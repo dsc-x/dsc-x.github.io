@@ -30,7 +30,7 @@ jobs:
         new-resolution: '500x500'
         output-folder: "public/chapters"
     - name: Build
-      run: npm run build
+      run: REACT_APP_CACHE_BUST=${{ github.sha }} npm run build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
