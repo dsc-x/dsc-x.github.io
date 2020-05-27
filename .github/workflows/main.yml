@@ -18,17 +18,15 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Lead Pics Optimize
-      uses: sharadcodes/img-resizer@v1.1
+      uses: xprilion/img-resizer@0.1
       with:
         image-folder: "public/leads"
-        new-resolution: '300x300'
-        output-folder: "public/leads"
+        new-resolution: "300x"
     - name: Chapter Pics Optimize
-      uses: sharadcodes/img-resizer@v1.1
+      uses: xprilion/img-resizer@0.1
       with:
         image-folder: "public/chapters"
-        new-resolution: '500x500'
-        output-folder: "public/chapters"
+        new-resolution: "500x"
     - name: Build
       run: REACT_APP_CACHE_BUST=${{ github.sha }} npm run build
     - name: Deploy
