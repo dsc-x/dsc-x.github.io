@@ -18,12 +18,12 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Lead Pics Optimize
-      uses: xprilion/img-resizer@0.2.2
+      uses: xprilion/img-resizer@v1
       with:
         target: "public/leads"
         dimensions: "300x"
     - name: Chapter Pics Optimize
-      uses: xprilion/img-resizer@0.2.2
+      uses: xprilion/img-resizer@v1
       with:
         target: "public/chapters"
         dimensions: "500x"
