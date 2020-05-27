@@ -3,7 +3,7 @@ import MiniChapter from './MiniChapter';
 import FullChapter from './FullChapter';
 import dsclogo from './assets/images/dsclogo.png';
 import './App.sass';
-import data from "./data/fulllist.json";
+import data from "./data/fulllist.json?cachebust=%REACT_APP_CACHE_BUST%";
 
 import SearchBar from 'material-ui-search-bar'
 import { withStyles } from '@material-ui/core/styles';
