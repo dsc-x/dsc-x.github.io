@@ -188,7 +188,7 @@ export default function FullChapter(props) {
                                             {props.data.LeadName}
                                         </Typography>
                                         <Typography color="textSecondary">
-                                            Lead 2019-20
+                                            Lead 2020-21
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
